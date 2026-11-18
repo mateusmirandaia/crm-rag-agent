@@ -1,0 +1,21 @@
+{"question": "Why did Velmora Freight's trucks stop reporting positions?", "expected": ["CAS-1001", "KB-0001"]}
+{"question": "How do I roll back Gateway G2 firmware?", "expected": ["KB-0001"]}
+{"question": "Users get 'Invalid SAML response signature' when signing in. What should we do?", "expected": ["KB-0002", "CAS-1005"]}
+{"question": "What are the rate limits of the Data Export API?", "expected": ["KB-0003"]}
+{"question": "Our nightly export fails with HTTP 429 Too Many Requests", "expected": ["KB-0003", "CAS-1007", "CAS-1013"]}
+{"question": "Field engineers' work orders are stuck and won't sync", "expected": ["KB-0004", "CAS-1008", "CAS-1025"]}
+{"question": "A customer was invoiced twice for the same month", "expected": ["KB-0005", "CAS-1004", "CAS-1016"]}
+{"question": "Freezer temperature readings are a couple of degrees too high", "expected": ["KB-0006", "CAS-1003"]}
+{"question": "Export timestamps are shifted by one hour", "expected": ["KB-0007", "CAS-1009", "CAS-1023"]}
+{"question": "What is the first response time for a Priority 1 case?", "expected": ["KB-0008", "CAS-1020"]}
+{"question": "How long is telemetry data retained?", "expected": ["KB-0009", "CAS-1015"]}
+{"question": "How do we handle a request to delete a former employee's personal data?", "expected": ["KB-0009", "CAS-1018"]}
+{"question": "Which firewall ports does the gateway need?", "expected": ["KB-0010", "CAS-1022"]}
+{"question": "New gateways show a blinking red LED and never appear in the portal", "expected": ["CAS-1021", "KB-0010"]}
+{"question": "Is Quillstone Pharma waiting on anything before rolling out firmware 4.2.1?", "expected": ["CAS-1006"]}
+{"question": "What does Kestrelmoor Mining use and where are they based?", "expected": ["ACC-009"]}
+{"question": "Which account needs a formal quote for a renewal tender?", "expected": ["CAS-1024"]}
+{"question": "Technicians cannot upload photos from older Android tablets", "expected": ["CAS-1017", "KB-0004"]}
+{"question": "What is the capital of Australia?", "expected": []}
+{"question": "Can you recommend a good pasta recipe?", "expected": []}
+{"question": "Who won the football world cup in 2022?", "expected": []}
