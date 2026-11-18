@@ -1,0 +1,62 @@
+[
+  {
+    "id": "KB-0001",
+    "title": "Rolling back Gateway G2 firmware",
+    "product": "Gateway G2",
+    "body": "Firmware 4.2.0 introduced a regression where some Gateway G2 units stop reporting after a cellular reconnect. The unit stays powered but shows a solid amber LED and no telemetry reaches the platform.\n\nTo roll back, open the Fleet Portal, go to Devices, select the affected gateways and choose Firmware > Roll back to previous version. The gateway keeps both the current and previous image, so a rollback does not require a download and completes in about two minutes.\n\nIf the unit is unreachable, power-cycle it twice within 30 seconds. This forces the bootloader to start the previous image. Version 4.2.1 fixes the reconnect issue and is safe to deploy once available for your region."
+  },
+  {
+    "id": "KB-0002",
+    "title": "Rotating the SAML signing certificate for single sign-on",
+    "product": "Single Sign-On",
+    "body": "When the identity provider's SAML signing certificate expires or is rotated, users see the error 'Invalid SAML response signature' and cannot sign in. Local admin accounts keep working, which is the recommended way to recover.\n\nSign in with a local admin account, open Settings > Security > Single Sign-On and upload the new certificate in PEM format, or paste the identity provider metadata URL so the certificate is refreshed automatically.\n\nWe recommend enabling metadata URL refresh. Certificates uploaded manually are not renewed, and the platform sends a reminder email to admins 30 days before expiry."
+  },
+  {
+    "id": "KB-0003",
+    "title": "Data Export API rate limits and HTTP 429 responses",
+    "product": "Data Export API",
+    "body": "The Data Export API allows 600 requests per minute per tenant and 10 concurrent export jobs. Requests above the limit receive HTTP 429 Too Many Requests with a Retry-After header in seconds.\n\nClients should honour Retry-After and use exponential backoff with jitter. Polling job status more than once every 5 seconds is the most common cause of throttling.\n\nFor large nightly exports, use the bulk export endpoint, which produces a single compressed file per day instead of thousands of paged requests. Strategic tier customers can request a temporary limit increase through support."
+  },
+  {
+    "id": "KB-0004",
+    "title": "Field Service Mobile offline sync troubleshooting",
+    "product": "Field Service Mobile",
+    "body": "Field Service Mobile stores work orders locally and syncs when a connection is available. If sync appears stuck, the pending changes counter on the home screen stays above zero after the device is back online.\n\nFirst check that the app is on version 7.3 or later; earlier versions could block the sync queue when an attachment larger than 25 MB was added. Then pull down on the work order list to force a sync.\n\nDo not uninstall the app while changes are pending, because unsynced work orders are only stored on the device. Support can retrieve a diagnostic bundle from Settings > Help > Send logs."
+  },
+  {
+    "id": "KB-0005",
+    "title": "Duplicate invoices in the Billing Portal",
+    "product": "Billing Portal",
+    "body": "Duplicate invoices can be generated when a billing contact changes the payment method during the monthly invoice run, which starts at 02:00 UTC on the first day of each month.\n\nDuplicates share the same billing period and amount but have different invoice numbers. Finance operations can void the duplicate from the Billing Portal under Invoices > Actions > Void; voiding issues a credit note automatically.\n\nIf the customer has already paid both invoices, the overpayment is applied as credit to the next invoice unless the customer asks for a refund, which takes 5 to 10 business days."
+  },
+  {
+    "id": "KB-0006",
+    "title": "Temperature sensor calibration and drift",
+    "product": "Gateway G2",
+    "body": "Gateway G2 temperature probes are factory calibrated to within 0.5 degrees Celsius. Over time, probes exposed to repeated freeze-thaw cycles can drift by up to 1.5 degrees.\n\nTo check a probe, compare its reading against a reference thermometer in a stable environment for at least 15 minutes. If the offset is constant, apply a calibration offset in the Fleet Portal under Devices > Sensors > Calibration. The offset is stored on the device and applied before data is sent.\n\nIf the offset varies over time, the probe is faulty and should be replaced under warranty. Probes are covered for 24 months from installation."
+  },
+  {
+    "id": "KB-0007",
+    "title": "Time zones in Data Export API files",
+    "product": "Data Export API",
+    "body": "All timestamps in export files are in UTC and formatted as ISO 8601. Reports that look shifted by one or more hours are almost always caused by the consuming system interpreting the values as local time.\n\nSince API version 2024-05, a tz query parameter can be passed to receive timestamps converted to a named IANA time zone, for example tz=Europe/Madrid. Daylight-saving transitions are handled by the conversion.\n\nWe still recommend keeping UTC in data warehouses and converting only for presentation."
+  },
+  {
+    "id": "KB-0008",
+    "title": "Support priorities and SLA response times",
+    "product": "Support",
+    "body": "Priority 1 means a production outage affecting most users or devices with no workaround. Priority 2 is a major degradation with a workaround. Priority 3 covers partial issues and questions. Priority 4 is for feature requests.\n\nFirst response targets are 1 hour for Priority 1, 4 business hours for Priority 2, 1 business day for Priority 3 and 5 business days for Priority 4. Strategic tier customers get 24x7 coverage for Priority 1 and 2; other tiers are covered during business hours.\n\nA case can be escalated by the account owner when the response target is missed or when business impact increases."
+  },
+  {
+    "id": "KB-0009",
+    "title": "Data retention and data subject deletion requests",
+    "product": "Data protection",
+    "body": "Telemetry is retained for 13 months by default. Enterprise and Strategic contracts can extend retention up to 7 years for regulatory reasons, which must be stated in the order form.\n\nData subject requests for access or deletion of personal data, such as field engineer names or mobile device identifiers, must be submitted by the customer's data protection contact through a support case with the category Data protection. We complete deletion within 30 days and confirm in the case.\n\nDeletion of personal data does not delete device telemetry, which is not personal data unless it is linked to an identifiable person."
+  },
+  {
+    "id": "KB-0010",
+    "title": "Network requirements for Gateway G2",
+    "product": "Gateway G2",
+    "body": "Gateway G2 connects outbound only. It needs TCP 443 to the telemetry endpoint and to the firmware update service, and UDP 123 for time synchronisation. No inbound ports are required.\n\nTLS inspection by corporate firewalls breaks the gateway's certificate pinning; the gateway will retry and eventually show a blinking red LED. Ask the network team to exclude the telemetry and update hostnames from TLS inspection.\n\nIf a proxy is mandatory, configure it in the Fleet Portal under Devices > Network > Proxy before shipping devices to the site."
+  }
+]

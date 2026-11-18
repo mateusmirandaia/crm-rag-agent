@@ -1,0 +1,102 @@
+[
+  {
+    "id": "ACC-001",
+    "name": "Velmora Freight",
+    "industry": "Logistics",
+    "city": "Rotterdam",
+    "country": "Netherlands",
+    "tier": "Strategic",
+    "products": ["Gateway G2", "Fleet Portal"],
+    "description": "Pan-European road freight operator running about 1,400 trucks. Uses Gateway G2 telematics units in every vehicle and the Fleet Portal for dispatch. Renewal is due in Q2 and the account team is negotiating a three-year extension."
+  },
+  {
+    "id": "ACC-002",
+    "name": "Corvallen Foods",
+    "industry": "Food distribution",
+    "city": "Porto",
+    "country": "Portugal",
+    "tier": "Enterprise",
+    "products": ["Gateway G2", "Billing Portal"],
+    "description": "Regional distributor of chilled and frozen food to supermarkets. Relies on temperature telemetry for food-safety audits, so sensor accuracy and data retention are contractual requirements."
+  },
+  {
+    "id": "ACC-003",
+    "name": "Quillstone Pharma",
+    "industry": "Pharmaceuticals",
+    "city": "Basel",
+    "country": "Switzerland",
+    "tier": "Strategic",
+    "products": ["Gateway G2", "Data Export API", "Single Sign-On"],
+    "description": "Mid-size pharmaceutical manufacturer shipping temperature-sensitive products. Strict validation requirements: every firmware update must be approved by their quality team before rollout. Authenticates users through SAML single sign-on."
+  },
+  {
+    "id": "ACC-004",
+    "name": "Redwick Utilities",
+    "industry": "Energy",
+    "city": "Leeds",
+    "country": "United Kingdom",
+    "tier": "Enterprise",
+    "products": ["Field Service Mobile", "Data Export API"],
+    "description": "Electricity distribution company with around 600 field engineers using the Field Service Mobile app to close work orders, often in areas with poor mobile coverage."
+  },
+  {
+    "id": "ACC-005",
+    "name": "Tallowmere Agritech",
+    "industry": "Agriculture",
+    "city": "Curitiba",
+    "country": "Brazil",
+    "tier": "Growth",
+    "products": ["Gateway G2", "Fleet Portal"],
+    "description": "Agricultural machinery rental company tracking harvesters and tractors across rural Parana. Gateways frequently run on intermittent cellular connections."
+  },
+  {
+    "id": "ACC-006",
+    "name": "Glacivo Cold Chain",
+    "industry": "Cold storage",
+    "city": "Valencia",
+    "country": "Spain",
+    "tier": "Enterprise",
+    "products": ["Gateway G2", "Billing Portal", "Data Export API"],
+    "description": "Operates refrigerated warehouses and reefer trailers. Exports telemetry nightly into their own data warehouse for compliance reporting."
+  },
+  {
+    "id": "ACC-007",
+    "name": "Marrowind Retail",
+    "industry": "Retail",
+    "city": "Toronto",
+    "country": "Canada",
+    "tier": "Growth",
+    "products": ["Field Service Mobile", "Billing Portal"],
+    "description": "Chain of 120 home-improvement stores using Field Service Mobile for in-store equipment maintenance. Finance team is sensitive to invoicing errors after a disputed invoice last year."
+  },
+  {
+    "id": "ACC-008",
+    "name": "Silverbirch Health Network",
+    "industry": "Healthcare",
+    "city": "Manchester",
+    "country": "United Kingdom",
+    "tier": "Strategic",
+    "products": ["Field Service Mobile", "Single Sign-On", "Data Export API"],
+    "description": "Group of hospitals using Field Service Mobile to maintain medical equipment. Subject to strict data-protection rules and periodically submits data subject requests."
+  },
+  {
+    "id": "ACC-009",
+    "name": "Kestrelmoor Mining",
+    "industry": "Mining",
+    "city": "Perth",
+    "country": "Australia",
+    "tier": "Enterprise",
+    "products": ["Gateway G2", "Fleet Portal", "Data Export API"],
+    "description": "Open-pit mining operator monitoring haul trucks. Gateways sit behind a restrictive corporate firewall managed by a central IT team."
+  },
+  {
+    "id": "ACC-010",
+    "name": "Elmbrook Water Authority",
+    "industry": "Public utilities",
+    "city": "Denver",
+    "country": "United States",
+    "tier": "Growth",
+    "products": ["Field Service Mobile", "Billing Portal"],
+    "description": "Municipal water utility. Procurement runs through public tenders, so contract changes and renewals require formal quotes well ahead of the deadline."
+  }
+]
