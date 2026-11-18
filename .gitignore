@@ -221,3 +221,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local vector index built by `python -m crm_rag.ingest`
+.index/
